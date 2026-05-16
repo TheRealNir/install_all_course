@@ -4,3 +4,21 @@ Thumbs.db
 
 # Logs
 *.log
+logs/
+
+# Temporary installer files
+install.bat
+uninstall.bat
+!windows/install.bat
+!windows/uninstall.bat
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Downloaded installers
+*.exe
+*.msi
+*.pkg
+*.dmg
+*.zip

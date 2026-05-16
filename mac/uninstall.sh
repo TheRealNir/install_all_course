@@ -16,12 +16,12 @@ if [[ "$DEBUG" == "true" ]]; then
   set -x
 fi
 
-echo "🚀 Starting install_all_course installer for macOS..."
+echo "🧹 Starting install_all_course uninstaller for macOS..."
 
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
-curl -fsSL "$REPO_RAW_BASE/mac/src/installer.sh" -o "$TMP_DIR/installer.sh"
-chmod +x "$TMP_DIR/installer.sh"
+curl -fsSL "$REPO_RAW_BASE/mac/src/uninstaller.sh" -o "$TMP_DIR/uninstaller.sh"
+chmod +x "$TMP_DIR/uninstaller.sh"
 
-bash "$TMP_DIR/installer.sh" "$@"
+bash "$TMP_DIR/uninstaller.sh" "$@"
