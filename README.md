@@ -1,16 +1,16 @@
-# Install All Course - One Click Development Setup
+# Install All Course - התקנת סביבת פיתוח בלחיצה אחת
 
-One-click installer for my course students. It installs the full development environment needed for the course.
+מתקין בלחיצה אחת לסטודנטים בקורס. הסקריפט מתקין את סביבת הפיתוח המלאה שצריך בשביל הקורס.
 
-The scripts are intentionally simple, readable, and safe to rerun. They install Cursor, not VS Code.
+הסקריפטים בנויים להיות פשוטים, קריאים, ובטוחים להרצה חוזרת. הם מתקינים Cursor, לא VS Code.
 
-> Important: students should only run scripts from a GitHub repo they trust.
+> חשוב: להריץ סקריפטים רק מתוך ריפוזיטורי GitHub שאתם סומכים עליו.
 
-## Quick Start
+## התחלה מהירה
 
 ### macOS
 
-Open Terminal, paste this command, and press Enter:
+פתחו Terminal, הדביקו את הפקודה הזאת, ולחצו Enter:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/TheRealNir/install_all_course/main/mac/install.sh | bash
@@ -18,15 +18,15 @@ curl -fsSL https://raw.githubusercontent.com/TheRealNir/install_all_course/main/
 
 ### Windows
 
-Open PowerShell, paste this command, and press Enter:
+פתחו PowerShell, הדביקו את הפקודה הזאת, ולחצו Enter:
 
 ```powershell
 irm "https://raw.githubusercontent.com/TheRealNir/install_all_course/main/windows/install.bat" -OutFile install.bat; .\install.bat
 ```
 
-If Windows asks for permission, approve it. If installation fails because of permissions, reopen PowerShell as Administrator and run the command again.
+אם Windows מבקש הרשאה, תאשרו. אם ההתקנה נכשלת בגלל הרשאות, פתחו PowerShell בתור Administrator והריצו שוב את הפקודה.
 
-## What Gets Installed
+## מה מותקן
 
 - Cursor
 - Git
@@ -34,11 +34,11 @@ If Windows asks for permission, approve it. If installation fails because of per
 - npm
 - Bun
 - Claude Code
-- Claude Code Cursor extension if available
+- תוסף Claude Code ל-Cursor, אם הוא זמין
 
-## After Installation
+## אחרי ההתקנה
 
-Close and reopen Terminal or PowerShell, then run:
+סגרו ופתחו מחדש את Terminal או PowerShell, ואז הריצו:
 
 ```bash
 node --version
@@ -48,13 +48,13 @@ git --version
 claude --version
 ```
 
-Then start Claude Code:
+אחר כך הפעילו את Claude Code:
 
 ```bash
 claude
 ```
 
-## Debug Mode
+## מצב דיבוג
 
 ### macOS
 
@@ -68,17 +68,17 @@ curl -fsSL https://raw.githubusercontent.com/TheRealNir/install_all_course/main/
 .\install.bat -debug
 ```
 
-## Troubleshooting
+## פתרון תקלות
 
-- If the Cursor command is not found, open Cursor once and enable or install the shell command manually if needed.
-- If Windows blocks script execution, open PowerShell as Administrator and run the install command again.
-- If macOS asks for a password during Homebrew install, use your Mac login password.
-- If installation fails, rerun the command. The installer is idempotent and skips tools that are already installed.
-- Make sure you have a stable internet connection during installation.
+- אם הפקודה `cursor` לא נמצאת, פתחו את Cursor פעם אחת והפעילו או התקינו את פקודת ה-shell ידנית אם צריך.
+- אם Windows חוסם את הרצת הסקריפט, פתחו PowerShell בתור Administrator והריצו שוב את פקודת ההתקנה.
+- אם macOS מבקש סיסמה בזמן התקנת Homebrew, השתמשו בסיסמת הכניסה למק.
+- אם ההתקנה נכשלת, הריצו שוב את הפקודה. הסקריפט בטוח להרצה חוזרת ומדלג על כלים שכבר מותקנים.
+- ודאו שיש חיבור אינטרנט יציב בזמן ההתקנה.
 
-## Uninstall
+## הסרה
 
-The uninstallers remove course tools where possible and avoid deleting user projects or personal files.
+סקריפטי ההסרה מסירים את כלי הקורס כשאפשר, ונמנעים ממחיקת פרויקטים או קבצים אישיים.
 
 ### macOS
 
@@ -92,15 +92,15 @@ curl -fsSL https://raw.githubusercontent.com/TheRealNir/install_all_course/main/
 irm "https://raw.githubusercontent.com/TheRealNir/install_all_course/main/windows/uninstall.bat" -OutFile uninstall.bat; .\uninstall.bat
 ```
 
-## Platform Details
+## מידע לפי מערכת הפעלה
 
-- [macOS README](mac/README.md)
-- [Windows README](windows/README.md)
+- [README ל-macOS](mac/README.md)
+- [README ל-Windows](windows/README.md)
 
-## Safety Notes
+## הערות בטיחות
 
-- No telemetry is added.
-- No data is sent to this repository.
-- The scripts do not delete user projects.
-- Node.js and nvm are not removed automatically by uninstallers.
-- Xcode Command Line Tools are not removed by the macOS uninstaller.
+- לא נוסף telemetry.
+- לא נשלח מידע לריפוזיטורי הזה.
+- הסקריפטים לא מוחקים פרויקטים של המשתמש.
+- Node.js ו-nvm לא מוסרים אוטומטית על ידי סקריפטי ההסרה.
+- Xcode Command Line Tools לא מוסר על ידי סקריפט ההסרה של macOS.
