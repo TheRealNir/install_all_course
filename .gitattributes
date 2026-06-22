@@ -1,0 +1,7 @@
+# Windows scripts must use CRLF line endings
+windows/**/*.ps1 text eol=crlf
+windows/**/*.bat text eol=crlf
+windows/**/*.cmd text eol=crlf
+
+# Mac/Unix scripts use LF
+mac/**/*.sh text eol=lf
